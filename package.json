@@ -1,11 +1,10 @@
 {
   "name": "srm-bfhl",
   "version": "1.0.0",
-  "description": "",
   "main": "api/index.js",
   "scripts": {
     "start": "node api/index.js",
-    "dev": "nodemon api/index.js"
+    "vercel-build": "cd frontend && npm install && npm run build && cd .. && rm -rf public && mv frontend/build public"
   },
   "dependencies": {
     "cors": "^2.8.5",
